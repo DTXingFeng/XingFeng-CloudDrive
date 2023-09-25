@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>My Page</title>
 </head>
 <body>
-    <p>遥遥领先</p>
+<p>The id parameter is: <span th:text="${id}"></span></p>
+
+<script type="text/javascript">
+    // 使用Thymeleaf注入的id参数
+    var id = [[${id}]];
+    console.log("Id from the server: " + id);
+
+    // 在这里你可以使用id参数进行JavaScript操作
+</script>
 </body>
 </html>
